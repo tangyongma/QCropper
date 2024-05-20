@@ -6,7 +6,7 @@
 
 import UIKit
 
-class Toolbar: UIView {
+public class Toolbar: UIView {
    public lazy var cancelButton: UIButton = {
         let button = self.titleButton("")
         button.left = 0
