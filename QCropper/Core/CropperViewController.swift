@@ -121,7 +121,7 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
         return sv
     }()
 
-    lazy var imageView: UIImageView = {
+    public lazy var imageView: UIImageView = {
         let iv = UIImageView(image: self.originalImage)
         iv.backgroundColor = .clear
         return iv

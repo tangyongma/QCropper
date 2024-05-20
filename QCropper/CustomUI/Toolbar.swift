@@ -7,15 +7,15 @@
 import UIKit
 
 class Toolbar: UIView {
-    lazy var cancelButton: UIButton = {
-        let button = self.titleButton("Cancel")
+   public lazy var cancelButton: UIButton = {
+        let button = self.titleButton("")
         button.left = 0
         button.autoresizingMask = [.flexibleBottomMargin, .flexibleRightMargin]
         return button
     }()
 
-    lazy var resetButton: UIButton = {
-        let button = self.titleButton("RESET", highlight: true)
+    public lazy var resetButton: UIButton = {
+        let button = self.titleButton("重置", highlight: true)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.isHidden = true
         button.centerX = self.width / 2
@@ -23,8 +23,8 @@ class Toolbar: UIView {
         return button
     }()
 
-    lazy var doneButton: UIButton = {
-        let button = self.titleButton("Done", highlight: true)
+    public lazy var doneButton: UIButton = {
+        let button = self.titleButton("", highlight: true)
         button.right = self.width
         button.setTitleColor(UIColor(white: 0.4, alpha: 1), for: .disabled)
         button.autoresizingMask = [.flexibleBottomMargin, .flexibleLeftMargin]
