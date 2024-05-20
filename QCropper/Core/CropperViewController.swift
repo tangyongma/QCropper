@@ -155,7 +155,7 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
         return topBar
     }()
 
-    open lazy var toolbar: UIView = {
+    open lazy var toolbar: Toolbar = {
         let toolbar = Toolbar(frame: CGRect(x: 0, y: 0, width: self.view.width, height: view.safeAreaInsets.bottom + barHeight))
         toolbar.doneButton.addTarget(self, action: #selector(confirmButtonPressed(_:)), for: .touchUpInside)
         toolbar.cancelButton.addTarget(self, action: #selector(cancelButtonPressed(_:)), for: .touchUpInside)
