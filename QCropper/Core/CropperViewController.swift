@@ -156,12 +156,12 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
     }()
 
     open lazy var toolbar: Toolbar = {
-        let toolbar = Toolbar(frame: CGRect(x: 0, y: 0, width: self.view.width, height: view.safeAreaInsets.bottom + barHeight))
-        toolbar.doneButton.addTarget(self, action: #selector(confirmButtonPressed(_:)), for: .touchUpInside)
-        toolbar.cancelButton.addTarget(self, action: #selector(cancelButtonPressed(_:)), for: .touchUpInside)
-        toolbar.resetButton.addTarget(self, action: #selector(resetButtonPressed(_:)), for: .touchUpInside)
+        let view = Toolbar(frame: CGRect(x: 0, y: 0, width: self.view.width, height: view.safeAreaInsets.bottom + barHeight))
+        view.doneButton.addTarget(self, action: #selector(confirmButtonPressed(_:)), for: .touchUpInside)
+        view.cancelButton.addTarget(self, action: #selector(cancelButtonPressed(_:)), for: .touchUpInside)
+        view.resetButton.addTarget(self, action: #selector(resetButtonPressed(_:)), for: .touchUpInside)
 
-        return toolbar
+        return view
     }()
 
     let verticalAspectRatios: [AspectRatio] = [
