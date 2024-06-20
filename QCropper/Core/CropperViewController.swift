@@ -30,7 +30,7 @@ public extension CropperViewControllerDelegate {
 }
 
 open class CropperViewController: UIViewController, Rotatable, StateRestorable, Flipable {
-    public let originalImage: UIImage
+    public var originalImage: UIImage
     var initialState: CropperState?
     var isCircular: Bool
 
